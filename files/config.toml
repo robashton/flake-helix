@@ -2,15 +2,15 @@ theme = "tokyonight"
 
 [editor]
 line-number = "relative"
-mouse = true
 gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
 bufferline = "always"
 idle-timeout = 0
 true-color = true
+completion-replace = true
 
 [editor.cursor-shape]
 insert = "bar"
-normal = "block"
+normal = "bar"
 select = "underline"
 
 [editor.lsp]
@@ -18,3 +18,5 @@ display-inlay-hints = true
 
 [editor.indent-guides]
 render = true
+
+

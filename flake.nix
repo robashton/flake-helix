@@ -25,6 +25,11 @@
           cp ${./.}/files/config.toml $out/config.toml
         '';
 
+        _languages = pkgs.runCommand "helix-languages" {} ''
+          mkdir -p $out/config/
+          cp ${./.}/files/languages.toml $out/config/languages.toml
+        '';
+
         hx = pkgs.writeShellScriptBin "hx" ''
           ${pkgs.helix}/bin/hx --config ${cfg}/config.toml $@
         '';
