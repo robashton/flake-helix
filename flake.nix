@@ -11,8 +11,12 @@
   outputs = inputs@{ nixpkgs, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
+#        hxOverlay = f: p: {
+#          hx-bleeding = inputs.hx.packages.${system}.helix;
+#        };
         pkgs = import nixpkgs {
           inherit system;
+#          overlays = [ hxOverlay ];
         };
 
         cfg = pkgs.runCommand "helix-config" {} ''

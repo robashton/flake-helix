@@ -1,3 +1,8 @@
 [[language]]
 name = "typescript"
 auto-format = true
+
+
+[[language]]
+name = "purescript"
+roots = [ "spago.yaml" ]
