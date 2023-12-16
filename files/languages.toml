@@ -1,8 +1,42 @@
 [[language]]
 name = "typescript"
 auto-format = true
-
+language-servers = [{name = "typescript-language-server"}, "tailwindcss-react", "eslint"]
 
 [[language]]
 name = "purescript"
 roots = [ "spago.yaml" ]
+
+[language-server.tailwindcss-react]
+language-id = "javascriptreact"
+command = "tailwindcss-language-server"
+config = { }
+args = ["--stdio"]
+timeout = 3
+
+[language-server.eslint]
+args = ["--stdio"]
+command = "vscode-eslint-language-server"
+
+[language-server.eslint.config]
+validate = "on"
+experimental = { useFlatConfig = false }
+rulesCustomizations = []
+run = "onType"
+problems = { shortenToSingleLine = false }
+nodePath = ""
+
+[language-server.eslint.config.codeAction]
+[language-server.eslint.config.codeAction.disableRuleComment]
+enable = true
+location = "separateLine"
+
+[language-server.eslint.config.codeAction.showDocumentation]
+enable = true
+
+[language-server.eslint.config.codeActionOnSave]
+enable = true
+mode = "fixAll"
+
+[language-server.eslint.config.workingDirectory]
+mode = "location"
