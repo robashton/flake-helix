@@ -4,6 +4,11 @@ auto-format = true
 language-servers = [{name = "typescript-language-server"}, "tailwindcss-react", "eslint"]
 
 [[language]]
+name = "tsx"
+auto-format = true
+language-servers = [{name = "typescript-language-server"}, "tailwindcss-react", "eslint"]
+
+[[language]]
 name = "purescript"
 roots = [ "spago.yaml" ]
 
