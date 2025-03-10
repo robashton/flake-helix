@@ -1,4 +1,4 @@
-theme = "tokyonight"
+theme = "sonokai"
 
 [editor]
 line-number = "relative"
@@ -6,7 +6,7 @@ gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
 bufferline = "always"
 idle-timeout = 0
 true-color = true
-completion-replace = true
+mouse = false
 
 [editor.cursor-shape]
 insert = "bar"
@@ -14,9 +14,9 @@ normal = "bar"
 select = "underline"
 
 [editor.lsp]
-display-inlay-hints = true
+display-inlay-hints = false
 
 [editor.indent-guides]
-render = true
+render = false
 
 
